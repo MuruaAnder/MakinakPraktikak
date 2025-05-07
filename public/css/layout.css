@@ -1,0 +1,260 @@
+/* styles.css */
+
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantiza que el body ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Contenedor principal del contenido */
+.containerContent {
+    flex: 1; /* El contenido principal ocupa el espacio disponible */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de la barra de navegación */
+.custom-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo img {
+    height: 50px;
+}
+
+/* Menú de escritorio */
+.navbar-menu {
+    display: flex;
+}
+
+.menu-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li {
+    margin-left: 20px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu-list a:hover {
+    color: #007BFF;
+}
+
+/* Estilo para el botón de iniciar sesión */
+.navbar-login {
+    margin-left: 20px;
+}
+
+.login-button {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.login-button i {
+    margin-right: 8px;
+}
+
+.login-button:hover {
+    color: #007BFF;
+}
+
+/* Botón de menú para móvil */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333333;
+}
+
+/* Sidebar para móvil */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px 25px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar-menu a:hover {
+    color: #007BFF;
+}
+
+/* Botón para cerrar el sidebar */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333333;
+}
+
+/* Estilo para pantallas móviles */
+@media (max-width: 768px) {
+    .navbar-menu, .navbar-login, #dropdown-menu-1{
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Estilos del Footer */
+.custom-footer {
+    background-color: #1c1c1c; /* Fondo oscuro */
+    color: #777; /* Color de texto gris */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Sombra superior ligera */
+    flex-shrink: 0; /* Evita que el footer se reduzca cuando hay poco contenido */
+}
+
+/* Contenedor del contenido del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Estilos para el logo en el footer */
+.footer-logo img {
+    width: 50px; /* Tamaño del logo */
+    height: 50px;
+    border-radius: 50%; /* Hacer el logo circular */
+    background-color: #0056b3; /* Fondo azul para el círculo */
+    padding: 10px;
+}
+
+/* Estilos para el texto central del footer */
+.footer-text {
+    font-size: 14px;
+    color: #aaa; /* Color de texto más claro */
+    text-align: center;
+    flex: 1;
+}
+
+/* DROP DOWN MENU LENGUAJES */
+/* Contenedor principal del grupo de botones de idioma */
+.custom-lang-btn-group {
+    position: relative;
+    display: inline-block;
+}
+.custom-lang-btn.dropdown-toggle::after {
+    display: none !important; /* Oculta la flecha generada automáticamente */
+}
+
+
+/* Estilo del botón principal para seleccionar idioma */
+.custom-lang-btn {
+    background-color: #f3f3f3; /* Color principal (azul) */
+    color: #000000;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre la bandera y el texto */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-lang-btn:hover {
+    background-color: #ffffff; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilo del menú desplegable */
+.custom-dropdown-menu {
+    display: none; /* Oculta el menú al cargar la página */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #cacaca;
+    border: 1px solid #dddddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 5px;
+    z-index: 1000;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+    overflow: hidden;
+}
+
+/* Estilo de cada elemento en el menú desplegable */
+.custom-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #333333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.custom-dropdown-item img, .custom-lang-btn img {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.custom-dropdown-item:hover {
+    background-color: #f0f0f0; /* Fondo claro al pasar el cursor */
+}

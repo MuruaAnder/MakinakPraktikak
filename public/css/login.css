@@ -1,0 +1,60 @@
+/* Estilos para el contenedor del formulario de login */
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Título */
+.container h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333333;
+}
+
+/* Inputs de usuario y contraseña */
+.container input[type="text"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.container input[type="text"]:focus,
+.container input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Botón de enviar */
+.container .btn {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.container .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Mensaje de error */
+.container p {
+    color: red;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
